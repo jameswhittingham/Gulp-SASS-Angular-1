@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "NRMA OK",
+  "description": null,
+  "icons": {
+    "60": "app/assets/images/favicons/firefox_app_60x60.png",
+    "128": "app/assets/images/favicons/firefox_app_128x128.png",
+    "512": "app/assets/images/favicons/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": null,
+    "url": null
+  }
+}

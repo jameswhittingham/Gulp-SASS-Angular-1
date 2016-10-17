@@ -1,0 +1,27 @@
+<!-- Include header file -->
+<div ng-include="'includes/header.html'"></div>
+
+
+<!-- Main Angular controller -->
+<main class="container" ng-controller="MainCtrl">
+  
+  <!-- Bootstrap Jumbotron -->
+  <div class="jumbotron">
+    <h1>Gulp SASS Angular 1 Boilerplate</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum vero eveniet, illo soluta, deserunt maiores ipsum. Quae nisi neque temporibus beatae nesciunt mollitia expedita assumenda. Nobis vitae rem, excepturi explicabo.</p>
+  </div>
+
+  <div class="row">
+    <!-- Loops out Panels from the data/data.js file -->
+    <div class="col-md-4" ng-repeat="panel in panels">
+      <div class="panel panel-default">
+        <div class="panel-heading" ng-bind-html="renderHtml(panel.title)"></div>
+        <div class="panel-body" ng-bind-html="renderHtml(panel.body)"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<!-- Include footer file -->
+<div ng-include="'includes/footer.html'"></div>

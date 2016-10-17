@@ -20,9 +20,13 @@
   },
   "devDependencies": {
     "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
     "bootstrap-sass": "^3.3.6",
     "favicons": "^4.7.1",
+    "gulp-cache-bust": "^1.0.2",
     "gulp-favicons": "^2.2.6",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.0.3",
     "html5shiv": "^3.7.3",
     "jquery": "^2.2.4",
     "jquery-migrate": "^3.0.0",

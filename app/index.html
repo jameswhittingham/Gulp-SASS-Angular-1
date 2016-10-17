@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Grunt SASS Boilerplate</title>
+    <title>Gulp SASS Angular 1 Boilerplate</title>
     
     <!-- Meta for viewport -->
     <meta name="viewport" content="initial-scale=1">
@@ -74,62 +74,30 @@
 
     <!-- Main Styles -->
     <link rel="stylesheet" href="styles/main.css">
-  
-    <!-- Browser polyfill fixes -->
-    <!--[if lt IE 9]>
-      <script type="text/javascript" src="scripts/vendor/html5shiv/dist/html5shiv.js"></script>
-      <script type="text/javascript" src="scripts/vendor/respond/src/respond.js"></script>
-      <script type="text/javascript" src="scripts/vendor/selectivizr/selectivizr.js"></script>
-    <![endif]-->
 
     <!-- Browser polyfill fixes -->
-    <!-- [if lt IE 9] >
-        <!- build:js assets/polyfills.js ->
-          <script type="text/javascript" src="../node_modules/html5shiv/dist/html5shiv.js"></script>
-          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
-          <script type="text/javascript" src="../node_modules/selectivizr2/selectivizr2.js"></script>
-            <!- endbuild ->
-    <! [endif] -->
+    <!-- build:js scripts/polyfills.js -->
+        <!-- [if lt IE 9] >
+            <script type="text/javascript" src="../node_modules/html5shiv/dist/html5shiv.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+            <script type="text/javascript" src="../node_modules/selectivizr2/selectivizr2.js"></script>
+        <! [endif] -->
+    <!-- endbuild -->
 
   </head>
   <body ng-app="myApp">
+
+    <div ng-view></div>
     
-
-    <!-- Include header file -->
-    <div ng-include="'includes/header.html'"></div>
-
-
-    <!-- Main Angular controller -->
-    <main class="container" ng-controller="MainCtrl">
-      
-      <!-- Bootstrap Jumbotron -->
-      <div class="jumbotron">
-        <h1>Grunt SASS Boilerplate</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum vero eveniet, illo soluta, deserunt maiores ipsum. Quae nisi neque temporibus beatae nesciunt mollitia expedita assumenda. Nobis vitae rem, excepturi explicabo.</p>
-      </div>
-
-      <div class="row">
-        <!-- Loops out Panels from the data/data.js file -->
-        <div class="col-md-4" ng-repeat="panel in panels">
-          <div class="panel panel-default">
-            <div class="panel-heading" ng-bind-html="renderHtml(panel.title)"></div>
-            <div class="panel-body" ng-bind-html="renderHtml(panel.body)"></div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-
-    <!-- Include footer file -->
-    <div ng-include="'includes/footer.html'"></div>
-
     <!-- build:js scripts/lib.js -->
         <!-- Vendor scripts -->
         <script src="../node_modules/jquery/dist/jquery.js"></script>
         <script src="../node_modules/angular/angular.js"></script>
+        <script src="../node_modules/angular-route/angular-route.js"></script>
         <script src="../node_modules/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
         <!-- Custom JS -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/routes/routes.js"></script>
         <script src="scripts/controllers/controllers.js"></script>
         <script src="scripts/services/services.js"></script>
         <script src="scripts/directives/directives.js"></script>

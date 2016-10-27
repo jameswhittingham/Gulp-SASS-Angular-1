@@ -31,7 +31,7 @@ gulp.task('minify', function (done) {
 /* Copy assets to build folder */
 gulp.task('copy-assets', function (done) {
 	// Copy HTML Includes
-	gulp.src(config.app + 'includes/*.html', {
+	gulp.src([config.app + 'includes/*.html',config.app + 'templates/*.html'], {
 		base: config.app
 	})
 	.pipe(gulp.dest(config.build.path));
@@ -53,7 +53,7 @@ gulp.task('copy-assets', function (done) {
 gulp.task('concat', function (done) {
 	gulp.src('app/*.html')
 	.pipe(useref())
-	//.pipe(gulpif('*.js', uglify()))
+	.pipe(gulpif('*.js', uglify({ mangle: false })))
 	.pipe(gulpif('*.css', cssnano()))
 	.pipe(gulp.dest(config.build.path))
 	.on('finish', done);

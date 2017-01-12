@@ -17,7 +17,7 @@ Installation instructions
 		a) Compass
 
 
-Grunt Tasks
+Gulp Tasks
 ===============================
 
 	1) Run the following commands from Command Line at your PROJECTs level
